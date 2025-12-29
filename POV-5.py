@@ -113,7 +113,7 @@ class TimerApp(QWidget):
     def start_stopwatch(self):
         if not self.stopwatch_running:
             self.stopwatch_running = True
-            self.update_timer.start(10)  # Обновление каждые 10 мс
+            self.update_timer.start(10)  
             self.stopwatch_start_button.setEnabled(False)
             self.stopwatch_pause_button.setEnabled(True)
 
@@ -147,7 +147,7 @@ class TimerApp(QWidget):
                 self.timer_total = self.timer_time
 
             self.timer_running = True
-            self.update_timer.start(10)  # Обновление каждые 10 мс
+            self.update_timer.start(10) 
             self.timer_start_button.setEnabled(False)
             self.timer_pause_button.setEnabled(True)
 
@@ -172,11 +172,11 @@ class TimerApp(QWidget):
 
     def update_time(self):
         if self.stopwatch_running:
-            self.stopwatch_time += 10  # Увеличиваем на 10 мс
+            self.stopwatch_time += 10  
             self.update_stopwatch_display()
 
         elif self.timer_running and self.timer_time > 0:
-            self.timer_time -= 10  # Уменьшаем на 10 мс
+            self.timer_time -= 10
 
             self.update_timer_display()
 
